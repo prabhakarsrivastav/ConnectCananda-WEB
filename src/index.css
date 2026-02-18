@@ -1,0 +1,383 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Binance-inspired dark theme with gold accents */
+    --background: 220 18% 8%;
+    --foreground: 45 7% 89%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 45 7% 89%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 45 7% 89%;
+
+    --primary: 45 93% 47%;
+    --primary-foreground: 220 18% 8%;
+
+    --secondary: 45 100% 51%;
+    --secondary-foreground: 220 18% 8%;
+
+    --muted: 220 14% 15%;
+    --muted-foreground: 45 7% 65%;
+
+    --accent: 45 93% 47%;
+    --accent-foreground: 220 18% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 18%;
+    --input: 220 14% 18%;
+    --ring: 45 93% 47%;
+
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --info: 199 89% 48%;
+
+    --radius: 0.5rem;
+
+    --admin-sidebar: 262 90% 6%;
+    --admin-sidebar-hover: 262 85% 12%;
+    --admin-header: 0 0% 100%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(45 93% 47%), hsl(45 100% 51%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 18% 10%), hsl(220 14% 15%));
+    --gradient-card: linear-gradient(180deg, hsl(220 18% 10%), hsl(220 14% 12%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 93% 47%), hsl(39 100% 57%));
+    
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px -1px hsl(0 0% 0% / 0.3);
+    --shadow-glow-gold: 0 0 30px hsl(45 93% 47% / 0.3);
+    
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Typography Hierarchy - Enhanced Font System */
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight;
+  }
+  
+  h3 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-snug;
+  }
+  
+  h4 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-snug;
+  }
+  
+  h5 {
+    @apply text-xl md:text-2xl lg:text-3xl font-medium tracking-normal leading-normal;
+  }
+  
+  h6 {
+    @apply text-lg md:text-xl lg:text-2xl font-medium tracking-normal leading-normal;
+  }
+  
+  /* Body Text - Improved Line Heights */
+  p {
+    @apply text-base leading-relaxed;
+  }
+  
+  .text-lead {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+  
+  .text-small {
+    @apply text-sm leading-relaxed;
+  }
+  
+  .text-tiny {
+    @apply text-xs leading-normal;
+  }
+  
+  /* Enhanced Focus States for Accessibility */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
+    @apply outline-none ring-4 ring-primary/50 ring-offset-2 ring-offset-background;
+  }
+  
+  /* Disabled States - Clear Styling */
+  button:disabled,
+  input:disabled,
+  textarea:disabled,
+  select:disabled,
+  [aria-disabled="true"] {
+    @apply opacity-50 cursor-not-allowed pointer-events-none;
+  }
+  
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    @apply bg-muted/50 text-muted-foreground border-muted;
+  }
+}
+
+@layer components {
+  /* Consistent Card Padding System */
+  .card-padding-sm {
+    @apply p-4;
+  }
+  
+  .card-padding-md {
+    @apply p-6;
+  }
+  
+  .card-padding-lg {
+    @apply p-8;
+  }
+  
+  .card-padding-xl {
+    @apply p-10;
+  }
+  
+  /* WCAG AA Compliant Text Colors */
+  .text-gold-accessible {
+    @apply text-[#FFD700]; /* Brighter gold for better contrast */
+  }
+  
+  .text-gold-dark-bg {
+    @apply text-[#FFC700]; /* Even brighter for dark backgrounds */
+  }
+  
+  /* Optimistic UI Loading States */
+  .optimistic-loading {
+    @apply opacity-60 pointer-events-none animate-pulse;
+  }
+  
+  .optimistic-success {
+    @apply animate-[scale-bounce_0.3s_ease-out];
+  }
+}
+
+@layer utilities {
+  /* Animation for optimistic UI */
+  @keyframes scale-bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Enhanced Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-muted/30 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/40 rounded-full hover:bg-primary/60;
+  }
+  
+  /* Responsive Touch Targets - Minimum 44x44px for mobile */
+  @media (max-width: 768px) {
+    button,
+    a[role="button"],
+    input[type="button"],
+    input[type="submit"],
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+  
+  /* Tablet Optimization (768px - 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
+    /* Better grid spacing for tablets */
+    .grid-cols-2 {
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Color-Independent State Indicators */
+  .state-success {
+    @apply border-l-4 border-green-500;
+  }
+  
+  .state-success::before {
+    content: "✓";
+    @apply inline-block mr-2 text-green-500 font-bold;
+  }
+  
+  .state-error {
+    @apply border-l-4 border-red-500;
+  }
+  
+  .state-error::before {
+    content: "✕";
+    @apply inline-block mr-2 text-red-500 font-bold;
+  }
+  
+  .state-warning {
+    @apply border-l-4 border-yellow-500;
+  }
+  
+  .state-warning::before {
+    content: "⚠";
+    @apply inline-block mr-2 text-yellow-500 font-bold;
+  }
+  
+  .state-info {
+    @apply border-l-4 border-blue-500;
+  }
+  
+  .state-info::before {
+    content: "ℹ";
+    @apply inline-block mr-2 text-blue-500 font-bold;
+  }
+  
+  /* Screen Reader Only - but visible on focus */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* Floating Animation for Beta Message Box */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Fade In Animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  /* Slide In From Left */
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+
+  /* Slide In From Right */
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+
+  /* Scale In Animation */
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  /* Glow Pulse Animation */
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(240, 185, 11, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(240, 185, 11, 0.6);
+    }
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+}

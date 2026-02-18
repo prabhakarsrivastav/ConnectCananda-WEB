@@ -1,0 +1,10 @@
+project_id = "frzptgcgdikdtkftbtwj"
+
+[functions.ai-chat]
+verify_jwt = false
+
+[functions.generate-ebook]
+verify_jwt = true
+
+[functions.generate-course-image]
+verify_jwt = false
