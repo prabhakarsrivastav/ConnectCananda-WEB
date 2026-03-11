@@ -118,7 +118,7 @@ export default function Resources() {
             Your Learning Hub for <span className="text-[#F0B90B]">Canadian Success</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
-            Explore curated courses, e-books, and AI-powered guidance to accelerate your journey in Canada
+            Things you need to do before arrival
           </p>
         </div>
       </section>
@@ -126,119 +126,6 @@ export default function Resources() {
       {/* AI-Powered Trending Courses - Band 2 */}
       <section className="py-20 bg-background">
         <TrendingCoursesSection />
-      </section>
-
-      {/* Sample Course List - Band 3 */}
-      <section className="py-24 md:py-32 bg-card border-y border-border">
-        <div className="container max-w-6xl mx-auto px-6 md:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-16 space-y-4">
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-2">
-              <BookOpen className="h-7 w-7 text-primary" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-              Essential Course list
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-normal leading-relaxed">
-              Curated Coursera courses to help you succeed in Canada
-            </p>
-          </div>
-
-          {/* Course Table */}
-          <div className="overflow-x-auto">
-            <div className="inline-block min-w-full align-middle">
-              <div className="overflow-hidden border border-border rounded-2xl">
-                <table className="min-w-full divide-y divide-border">
-                  <thead className="bg-muted">
-                    <tr>
-                      <th scope="col" className="px-6 py-4 text-left text-sm font-semibold text-foreground">
-                        Course
-                      </th>
-                      <th scope="col" className="px-6 py-4 text-left text-sm font-semibold text-foreground">
-                        Platform
-                      </th>
-                      <th scope="col" className="px-6 py-4 text-left text-sm font-semibold text-foreground">
-                        Focus
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-border bg-card">
-                    <tr className="hover:bg-muted/50 transition-colors">
-                      <td className="px-6 py-4 text-sm font-medium text-foreground">
-                        <a href="https://www.coursera.org/search?query=canada%20arrival" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-2">
-                          Canada Arrival Essentials
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        <Badge variant="secondary">Coursera</Badge>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        Covers permit types, PR pathways, settlement steps
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-muted/50 transition-colors">
-                      <td className="px-6 py-4 text-sm font-medium text-foreground">
-                        <a href="https://www.coursera.org/search?query=workplace%20communication%20canada" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-2">
-                          Workplace Communication in Canada
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        <Badge variant="secondary">Coursera</Badge>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        Canadian workplace etiquette & communication
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-muted/50 transition-colors">
-                      <td className="px-6 py-4 text-sm font-medium text-foreground">
-                        <a href="https://www.coursera.org/search?query=financial%20planning%20canada" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-2">
-                          Financial Planning for Newcomers
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        <Badge variant="secondary">Coursera</Badge>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        Managing bank accounts, credit, taxes
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-muted/50 transition-colors">
-                      <td className="px-6 py-4 text-sm font-medium text-foreground">
-                        <a href="https://www.coursera.org/search?query=healthcare%20system%20canada" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-2">
-                          Healthcare System in Canada
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        <Badge variant="secondary">Coursera</Badge>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        How to access healthcare and insurance
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-muted/50 transition-colors">
-                      <td className="px-6 py-4 text-sm font-medium text-foreground">
-                        <a href="https://www.coursera.org/search?query=resume%20job%20search%20canada" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-2">
-                          Resume & Job Search Skills
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        <Badge variant="secondary">Coursera</Badge>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-muted-foreground">
-                        Writing Canadian-style resumes, networking
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Free Learning Section - Band 4 */}

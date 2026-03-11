@@ -219,7 +219,7 @@ export default function Blog() {
                   </p>
                   <p className="text-lg md:text-xl leading-relaxed text-white/60 font-light">
                     That&apos;s why we&apos;ve built a comprehensive ecosystem that supports you at every stage of your journey
-                    — from your first permit application to your final citizenship ceremony and beyond.
+                    — from your arrival to settlement.
                   </p>
                 </div>
 
@@ -330,8 +330,7 @@ export default function Blog() {
                       <div>
                         <h4 className="text-xl font-bold mb-2 text-white">Arrival Foundation</h4>
                         <p className="text-white/60 leading-relaxed">
-                          Secure your permit and permanent residency with expert arrival consultants
-                          who understand the latest regulations and processes.
+                          Secure your Canadian success journey with expert arrival consultants who understand the latest regulations and processes.
                         </p>
                       </div>
                     </div>
@@ -393,7 +392,7 @@ export default function Blog() {
 
                   <div className="rounded-3xl bg-gradient-to-br from-[#F0B90B] via-[#F3BA2F] to-[#F0B90B] p-10 md:p-12 my-12 shadow-[0_0_50px_rgba(240,185,11,0.3)] hover:scale-[1.02] transition-all duration-500">
                     <p className="text-2xl md:text-3xl italic leading-relaxed mb-8 text-[#0B0E11] font-light">
-                      &quot;The complete service approach made all the difference. From getting my PR to
+                      &quot;The complete service approach made all the difference. From arrival to
                       finding a job to setting up my business — I had expert support every step of the way.&quot;
                     </p>
                     <div className="flex items-center gap-4">

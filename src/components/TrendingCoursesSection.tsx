@@ -192,7 +192,7 @@ export default function TrendingCoursesSection() {
         <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 text-lg font-medium shadow-[0_0_30px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-all" onClick={() => document.getElementById('course-finder')?.scrollIntoView({
           behavior: 'smooth'
         })}>
-          Start Learning Free
+          Register Your Free Webinar
         </Button>
       </div>
     </section>

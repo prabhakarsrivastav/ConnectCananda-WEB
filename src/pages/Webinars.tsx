@@ -68,14 +68,14 @@ const Webinars = () => {
       const result = await response.json();
 
       if (!response.ok) throw new Error(result.error);
-      
+
       const webinarsData = (result.data || []).map((w: any) => ({
         ...w,
         id: w.id || w._id
       }));
-      
+
       setWebinars(webinarsData);
-      
+
       const counts: Record<string, number> = {};
       webinarsData.forEach((webinar: Webinar) => {
         counts[webinar.id] = (webinar as any).registration_count || 0;
@@ -120,7 +120,7 @@ const Webinars = () => {
     }
 
     const webinarId = selectedWebinar?.id || selectedWebinar?._id;
-    
+
     if (!webinarId) {
       console.error('No webinar ID found:', selectedWebinar);
       toast({
@@ -185,13 +185,13 @@ const Webinars = () => {
   return (
     <div className="min-h-screen bg-[#0B0E11]">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#0B0E11] via-[#181A20] to-[#0B0E11] overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#F0B90B]/5 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#F0B90B]/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-        
+
         <div className="container relative z-10 px-4">
           <div className="text-center max-w-3xl mx-auto">
             <Badge className="mb-4 bg-[#F0B90B]/10 text-[#F0B90B] border-[#F0B90B]/20">
@@ -208,8 +208,56 @@ const Webinars = () => {
         </div>
       </section>
 
+      {/* Additional Information Section */}
+      <section className="py-12 bg-[#181A20]/50 border-b border-[#F0B90B]/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto bg-[#181A20] p-8 rounded-3xl border border-[#F0B90B]/10 shadow-xl">
+            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+              <Video className="h-6 w-6 text-[#F0B90B]" />
+              Requirements & Additional Information
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <h3 className="text-[#F0B90B] font-semibold">Technical Requirements</h3>
+                <ul className="space-y-2 text-white/70 text-sm">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-500" />
+                    Stable internet connection
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-500" />
+                    A computer or mobile device with audio
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-500" />
+                    Modern web browser (Chrome, Firefox, Safari)
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-[#F0B90B] font-semibold">Important Notes</h3>
+                <ul className="space-y-2 text-white/70 text-sm">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-500" />
+                    Join 5 minutes before the start time
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-500" />
+                    Interactive Q&A session at the end
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-500" />
+                    Recording available for registered users
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* YouTube 3D Section */}
-      <YouTube3DSection 
+      <YouTube3DSection
         videoId="l2PuCrOmWMw"
         title="Watch Our Latest Webinar"
         subtitle="Learn from expert sessions and get insights from industry leaders"
@@ -239,7 +287,7 @@ const Webinars = () => {
               {webinars.map((webinar) => {
                 const registrationCount = registrationCounts[webinar.id] || 0;
                 const isFull = webinar.max_attendees && registrationCount >= webinar.max_attendees;
-                
+
                 return (
                   <Card
                     key={webinar.id}
@@ -363,7 +411,7 @@ const Webinars = () => {
               {selectedWebinar?.title}
             </DialogDescription>
           </DialogHeader>
-          
+
           <form onSubmit={handleSubmit} className="space-y-4 mt-4">
             <div>
               <Label htmlFor="name" className="text-white">Full Name *</Label>

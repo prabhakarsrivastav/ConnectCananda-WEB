@@ -122,9 +122,9 @@ export const BookingDialog = ({ open, onOpenChange, service }: BookingDialogProp
 
       // Check if authentication error - clear local state and redirect to auth
       if (error.message?.includes('Invalid or expired token') ||
-          error.message?.includes('No token provided') ||
-          error.message?.includes('User not found') ||
-          error.message?.includes('Unauthorized')) {
+        error.message?.includes('No token provided') ||
+        error.message?.includes('User not found') ||
+        error.message?.includes('Unauthorized')) {
         console.log('🔐 Authentication error detected - clearing local auth state and redirecting to login');
         contextLogout(); // Properly logout using context method
 
@@ -179,8 +179,8 @@ export const BookingDialog = ({ open, onOpenChange, service }: BookingDialogProp
             {step === "success" ? "Booking Confirmed!" : "Book Service"}
           </DialogTitle>
           <DialogDescription className="text-[#848e9c]">
-            {step === "success" 
-              ? "Your booking has been confirmed" 
+            {step === "success"
+              ? "Your booking has been confirmed"
               : `Complete your booking for ${service.title}`}
           </DialogDescription>
         </DialogHeader>
@@ -308,7 +308,7 @@ export const BookingDialog = ({ open, onOpenChange, service }: BookingDialogProp
                 <CheckCircle2 className="h-8 w-8 text-[#02c076]" />
               </div>
             </div>
-            
+
             <div className="space-y-2">
               <p className="text-white">
                 Your booking has been confirmed for:

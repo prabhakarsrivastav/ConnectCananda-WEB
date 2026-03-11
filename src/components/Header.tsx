@@ -80,11 +80,14 @@ export const Header = () => {
             <Link to="/resources" className="px-4 py-2 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:scale-105">
               Resources
             </Link>
-            <Link to="/shop" className="px-4 py-2 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:scale-105">
-              Courses/Ebooks
+            <Link to="/courses" className="px-4 py-2 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:scale-105">
+              Courses
+            </Link>
+            <Link to="/ebooks" className="px-4 py-2 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:scale-105">
+              Ebooks
             </Link>
             <Link to="/affiliates" className="px-4 py-2 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:scale-105">
-              Refer/Earn
+              Affiliate
             </Link>
             <Link to="/webinars" className="px-4 py-2 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:scale-105">
               Webinars
@@ -147,8 +150,11 @@ export const Header = () => {
             <Link to="/resources" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
               Resources
             </Link>
-            <Link to="/shop" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+            <Link to="/courses" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
               Courses
+            </Link>
+            <Link to="/ebooks" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+              Ebooks
             </Link>
             <Link to="/webinars" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
               Webinars
