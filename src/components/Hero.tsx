@@ -55,19 +55,13 @@ export const Hero = () => {
 
   return (
     <section className="container px-4 py-20 md:py-10 bg-[#0B0E11]">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-12 items-start lg:pt-8">
         {/* Left Content */}
         <div className="space-y-8">
-          <div className="inline-block">
-            {/*<span className="px-4 py-2 rounded-full bg-[#F0B90B]/10 text-[#F0B90B] text-sm font-medium border border-[#F0B90B]/20">
-              Welcome to Canada 🇨🇦
-            </span>*/}
-          </div>
-
-          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            NAVIGATE YOUR CANADA SUCCESS JOURNEY WITH {" "}
+          <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-none mt-0 lg:-mt-2 tracking-tight">
+            Learn practical Handyman Skills, Digital Business Skills, Job Search, Interview success Skills, Small/ Side Business Skills, Entrepreneurship Skills and {" "}
             <span className="text-gold-dark-bg">
-              CLARITY, CONFIDENCE AND SPEED.
+              Start Earning Income Quickly in Canada.
             </span>
           </h1>
 
