@@ -66,7 +66,7 @@ export const Hero = () => {
           </h1>
 
           <p className="text-lead text-white/80">
-            We help people who are new to Canada connect with trusted and verified consultants, coaches, businesses, and mentors who have real experience. We also provide useful resources that guide them in finding their first entry-level job, starting a small business, settling in, and becoming part of the community.          </p>
+            We connect newcomers to Canada with Consultants, Coaches, Mentors and Businesses.We also facilitate connection to useful Settlement and Integration resources that guide them towards first entry-level job,self employment,Small business startup, Trainings and Skills.          </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
