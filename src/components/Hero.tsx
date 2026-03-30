@@ -59,14 +59,15 @@ export const Hero = () => {
         {/* Left Content */}
         <div className="space-y-8">
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-none mt-0 lg:-mt-2 tracking-tight">
-            Learn practical Handyman Skills, Digital Business Skills, Job Search, Interview success Skills, Small/ Side Business Skills, Entrepreneurship Skills and {" "}
+            Learn Handyman skills and Handyman Business Management skills Online and{" "}
             <span className="text-gold-dark-bg">
-              Start Earning Income Quickly in Canada.
+              start earning Income Quickly.
             </span>
           </h1>
 
           <p className="text-lead text-white/80">
-            We connect newcomers to Canada with Consultants, Coaches, Mentors and Businesses.We also facilitate connection to useful Settlement and Integration resources that guide them towards first entry-level job,self employment,Small business startup, Trainings and Skills.          </p>
+            We provide Basic Handyman training online in High-Demand skills like basic Installations and Assembly, Home Improvement and Repairs; etc. designed to help you start earning income fast even if you have ZERO Experience. Our training will help you succeed in today’s Job market and Business environment.
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button

@@ -13,9 +13,7 @@ export const Footer = () => {
             </div>
             <span className="text-[10px] text-muted-foreground ml-10">Settle smart support services Canada</span>
           </div>
-          <p className="text-sm text-muted-foreground">
-            Your trusted partner for navigating life in Canada with confidence.
-          </p>
+
           <div className="flex space-x-3">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
               <Facebook className="h-5 w-5" />
